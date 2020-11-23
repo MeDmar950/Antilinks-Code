@@ -15,6 +15,7 @@ mongoose.connect('MongoDBLink', {
 client.on('message', async(message) => {
     if(message.author.bot) return;
     if(message.content.startsWith(prefix + 'antilink_on')) {
+        if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(`**You missing required permisison __ADMINISTRATOR__**`)
         message.channel.send(`**Done The AntiLinks now is on**`);
         antilinks.findOne({Guild: message.guild.id}, (err, doc) => {
             if(err) console.error(err);
@@ -36,6 +37,7 @@ client.on('message', async(message) => {
 client.on('message', async(message) => {
     if(message.author.bot) return;
     if(message.content.startsWith(prefix + 'antilink_off')) {
+        if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(`**You missing required permisison __ADMINISTRATOR__**`)
         message.channel.send(`**Done The AntiLinks now is off**`);
         antilinks.findOne({Guild: message.guild.id}, (err, doc) => {
             if(err) console.error(err);
