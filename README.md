@@ -2,10 +2,8 @@
 
 Basic AntiLinks Code, Feature On Or Off AntiLinks
 
-Perview:
-[!AntiLinks]()
+# Usage: 
 
-#Usage: 
 Admin Commands:
 *`$antilinks_on`*
 *`$antilinks_off`*
