@@ -62,6 +62,22 @@ client.on('message', async(message) => {
     if(data.run === 'on') {
         if(links(message.content) === true) {
             message.delete()       
+            try {
+                let muterole = message.guild.roles.cache.find(ro => ro.name === 'Muted');
+                if(!muterole) {
+                    message.guild.roles.create({
+                        data: {
+                            name: 'Muted',
+                            color: 'RANDOM',
+                            permissions: []
+                        }
+                    })
+                } else {
+                    message.guild.member(message.author).roles.add(muterole);
+                }
+            } catch(err) {
+                console.log(err);
+            }
     }
 }
 })
