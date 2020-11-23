@@ -6,8 +6,8 @@ Perview:
 [!AntiLinks]()
 
 #Usage: 
-Admin Commands:
-**$antilinks_on**
-**$antilinks_off**
+Admin Commands:\n
+*`$antilinks_on`*
+*`$antilinks_off`*
 
 Code By Dmar MeCodes
